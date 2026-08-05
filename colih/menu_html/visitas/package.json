@@ -1,0 +1,19 @@
+{
+  "name": "colih-visitas",
+  "version": "1.0.0",
+  "description": "CRUD em JavaScript para cadastro e visualização de visitas GVP no PostgreSQL colih",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.112.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^4.21.2",
+    "pg": "^8.13.1",
+    "postgres": "^3.4.9",
+    "processenv": "^3.0.9"
+  }
+}

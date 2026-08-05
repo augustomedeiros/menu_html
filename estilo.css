@@ -1,0 +1,198 @@
+<style>
+
+/**
+ * Alterações: Medeiros
+ * Data: 2026-07-15
+ * Descrição: Estilização do menu responsivo com dropdowns e efeitos de hover. 
+ * CSS Reset - Remove margens, paddings e outros estilos padrão do navegador
+ * Fonte: https://meyerweb.com/eric/tools/css/reset/
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+.container{
+    background-color: #B1F0F7;  
+}
+body {
+    line-height: 1;
+    margin: auto;
+    height: 800px;
+    width: 800px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f8fa; 
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'calibri', sans-serif;
+  font-size: 16px;
+}
+table{
+  width: 500px; /** esse não tinha */
+  border-spacing: 0;
+  background-size: 100%;
+  table-layout: fixed; 
+  border-collapse: collapse; 
+  border: 1px solid Silver;
+  text-align: left;
+}
+tr {
+  /** font-size: 10px; **/
+  /** height: 10px; **/
+}
+td {
+  font-size: 14px;
+  padding: 1px 1px;
+  border:1px solid silver;
+  height: 10px;
+}
+body{
+  height: 90vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center; 
+}
+.container{
+  width: 310px;
+  padding: 10px;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+}
+h1,h2,h3,h4{
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: white;
+  text-shadow: 1px 1px 2px white, 0 0 1em yellow, 0 0 0.2em blue;
+}
+/* ------------------------- */
+/* 1. ESTILIZAÇÃO BÁSICA (RESET & FONTES) */
+/* ------------------------- */
+body {
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	background-color: #577d96; /* Cor de fundo suave */
+}
+
+.menu-container {
+	width: 100%;
+	background-color: #333; /* Fundo escuro para o menu */
+	padding: 0;
+}
+
+/* Remove os marcadores (bolinhas) das listas e ajusta o padding/margin */
+.menu, .submenu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu li {
+	float: left; /* Faz os itens principais ficarem lado a lado no desktop */
+	position: relative; /* Necessário para o dropdown funcionar */
+}
+
+/* Links em geral */
+.menu a, .submenu a {
+	display: block;
+	padding: 15px 20px;
+	text-decoration: none; /* Remove o sublinhado padrão */
+	color: white;
+	font-size: 16px;
+	transition: background-color 0.3s, color 0.3s; /* Transição suave de cor/fundo */
+}
+
+/* Efeito HOVER nos itens principais (desktop) */
+.menu li:hover > a {
+	background-color: #555; /* Cor mais clara ao passar o mouse */
+	color: #ffc107; /* Destaque em amarelo/dourado */
+}
+
+/* ------------------------- */
+/* 2. ESTILO DOS SUBMENUS (DROPDOWN) - DESKTOP */
+/* ------------------------- */
+
+/* O submenu não deve aparecer por padrão, ele precisa estar oculto */
+.submenu {
+	display: none;
+	position: absolute; /* Faz o dropdown flutuar sobre o conteúdo */
+	top: 100%; /* Posiciona o dropdown logo abaixo do item pai */
+	left: 0;
+	z-index: 10; /* Garante que ele fique acima de outros elementos */
+	background-color: #444; /* Fundo um pouco mais claro que o principal */
+	min-width: 200px;
+}
+
+/* O truque mágico para mostrar o submenu no hover do PARENTE */
+.menu li:hover > .submenu {
+	display: block;
+}
+
+/* Efeito HOVER nos itens internos (dentro do submenu) */
+.submenu a:hover {
+	background-color: #666; 
+	color: white;
+}
+
+
+/* ============================= */
+/* 3. RESPONSIVIDADE PARA CELULAR/TABLET */
+/* O código CSS só será aplicado se a tela for MENOR QUE 768px (tamanho típico de tablet/celular)*/
+/* ============================= */
+@media screen and max-width: 768px {
+	
+	.menu li {
+		float: none; /* Faz com que os itens não tentem ficar em linha */
+		width: 100%;
+	}
+
+	.submenu {
+		/* No celular, ele deve aparecer embaixo e ocupar toda a largura */
+		position: relative;
+		width: 100%;
+		border-top: none; /* Remove bordas que atrapalham em stacked menus */
+	}
+
+	/* Ajuste o hover para mobile (É mais complexo de fazer só com CSS, mas já melhora muito) */
+		.menu li:hover > .submenu {
+			display: block; 
+	}
+}
+</style>

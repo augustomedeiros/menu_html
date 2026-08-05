@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style-gg.css">
+    <title>Visualização Individual da Visita - GVP / COLIH</title>
+    <style>
+        .card-detalhe {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .header-detalhe {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+        .header-title {
+            color: #007bff;
+            margin: 0;
+            font-size: 22px;
+        }
+        .btn-nav {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .btn-voltar { background-color: #6c757d; color: white; }
+        .btn-voltar:hover { background-color: #5a6268; }
+        .btn-editar { background-color: #ffc107; color: #212529; }
+        .btn-editar:hover { background-color: #e0a800; }
+        .btn-excluir { background-color: #dc3545; color: white; border: none; cursor: pointer; }
+        .btn-excluir:hover { background-color: #c82333; }
+
+        .tabela-detalhe {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .tabela-detalhe tr:nth-child(even) { background-color: #f8f9fa; }
+        .tabela-detalhe td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e9ecef;
+            vertical-align: top;
+        }
+        .campo-label {
+            font-weight: bold;
+            color: #495057;
+            width: 40%;
+        }
+        .campo-valor {
+            color: #212529;
+            width: 60%;
+        }
+        .alert {
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            display: none;
+        }
+        .alert-error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+    </style>
+</head>
+<body>
+
+    <div class="card-detalhe">
+        <div class="header-detalhe">
+            <h2 class="header-title" id="tituloFicha">📄 Ficha da Visita</h2>
+            <div>
+                <a href="lista.html" class="btn-nav btn-voltar">📋 Voltar</a>
+                <a id="btnLinkEditar" href="#" class="btn-nav btn-editar">✏️ Editar</a>
+                <button id="btnExcluirDetalhe" class="btn-nav btn-excluir">🗑️ Excluir</button>
+            </div>
+        </div>
+
+        <div id="mensagemFeedback" class="alert alert-error"></div>
+
+        <!-- Tabela de Detalhes da Visita -->
+        <table class="tabela-detalhe">
+            <tbody id="corpoTabelaDetalhe">
+                <tr>
+                    <td colspan="2" style="text-align: center; padding: 20px;">Carregando informações da visita...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <script src="js/api.js"></script>
+    <script src="js/detalhe.js"></script>
+</body>
+</html>

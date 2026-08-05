@@ -1,0 +1,16 @@
+<?php
+require 'vendor/autoload.php'; // Carrega o Composer
+
+// Conecta ao banco de dados
+$client = new MongoDB\Client("mongodb://localhost:27017");
+
+// Seleciona a coleção (equivalente ao modelo no Mongoose)
+$colecao = $client->meuBanco->usuarios;
+
+// Insere um documento
+$resultado = $colecao->insertOne([
+    'nome' => 'João',
+    'email' => 'joao@email.com'
+]);
+
+echo "Usuário inserido com o ID: " . $resultado->getInsertedId();

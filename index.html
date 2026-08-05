@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- ESSENCIAL PARA RESPONSIVIDADE: define que o tamanho do site deve se adaptar ao dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Admininstração - Tpe / Colih</title>
+  
+</head>
+<body>
+
+<!-- ================== -->
+<!-- ESTRUTURA DO MENU HTML -->
+<!-- ================== -->
+<header class="menu-container">
+    <nav aria-label="Menu Principal">
+        <ul class="menu">
+            <!-- COLIH (Com Dropdown) -->
+            <li class="has-submenu">
+                <a href="#colih">Colih</a>
+                <ul class="submenu">
+                    <li><a href="colih/visitas/lista.html">Visitas - Lista</a></li>
+                    <li><a href="colih/visitas/index.html">Visitas - Cadastro</a></li>
+                    <li><a href="colih/hospedagem">Hospedagem</a></li>
+                    <li><a href="colih/hospitais">Hospitais</a></li>
+                    <li><a href="colih/gvp">GVP - Cadastro</a></li>
+                    <li><a href="colih/estoque">Estoque</a></li>
+
+                </ul>
+            </li>
+            
+            <!-- TPE (Com Dropdown) -->
+            <li class="has-submenu">
+                <a href="#tpe">TPE</a>
+                <ul class="submenu">
+                    <li><a href="tpe/publicadores/listar.php">Publicadores</a></li>
+                    <li><a href="#">Carrinhos</a></li>
+                    <li><a href="#">Movimento</a></li>
+                    <li><a href="#">Locais</a></li>
+                    <li><a href="tpe/cartazes/index.php">Cartazes</a></li>
+                </ul>
+            </li>
+
+             <!-- Itens Simples (Sem Dropdown) -->
+            <li><a href="#home">Home</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main style="padding: 50px; text-align: center;">
+    <h1>🚀 Menu!</h1>
+    <p>Tente redimensionar a janela do navegador ou visualizar no modo desenvolvedor (F12) para ver o efeito responsivo em ação!</p>
+</main>
+
+</body>
+</html>

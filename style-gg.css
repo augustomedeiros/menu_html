@@ -1,0 +1,187 @@
+<style>
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+.container{
+    background-color: #B1F0F7;  
+}
+body {
+    line-height: 1;
+    margin: auto;
+    height: 800px;
+    width: 800px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f8fa; 
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'calibri', sans-serif;
+  font-size: 16px;
+}
+table{
+  table-layout: fixed;
+  width: 500px; /** esse não tinha */
+  border-spacing: 0;
+  background-size: 100%;
+  border-collapse: collapse; 
+  border: 1px solid Silver;
+  text-align: left;
+}
+tr {
+  /** font-size: 10px; **/
+  /** height: 10px; **/
+}
+td {
+  font-size: 14px;
+  padding: 1px 1px;
+  border:1px solid silver;
+  height: 10px;
+}
+body{
+  height: 90vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center; 
+}
+.container{
+  width: 310px;
+  padding: 10px;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+}
+h1,h2,h3,h4{
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: white;
+  text-shadow: 1px 1px 2px white, 0 0 1em yellow, 0 0 0.2em blue;
+}
+input{
+  width: 100%;  
+  height: 20px;
+  padding: 1px;
+  margin-left: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  font-size: 15px;
+}
+input[type="checkbox"]{
+  width: 15px;
+  height: 15px;  
+}
+input[type="date"]{
+  width: 200px;
+  height: 25px;
+  padding: 1px;
+  margin-bottom: 1px;
+}
+select{
+  width: 60%;
+  height: 80%;
+  padding: 2px;
+  margin-bottom: 10px;
+}
+textarea{
+  width: 100%;
+  padding: 10px;
+}
+#submit{
+  border: none;
+  background-color: #B2C9AD;
+  color: white;
+  width: 100%;
+  height: 25px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+#submit:hover{
+  background-color: #4B5945;
+}
+/* ---------------------------------------------- */
+/* --- O SELETOR PRINCIPAL DO INPUT REBAIXADO --- */
+/* ---------------------------------------------- */
+.input-rebaixado {
+    /* Dimensionamento e Espaçamento */
+    padding: 12px 20px; /* Mais padding vertical para parecer mais 'gordo' */
+    width: 100%; 
+    height: 20px; /* Altura maior para parecer mais 'gordo' */
+    box-sizing: border-box;
+
+    /* Cantos Arredondados (Requisito 1) */
+    border-radius: 12px; 
+    
+    /* Removendo o estilo de bordo padrão do navegador para controle total */
+    border: none;
+    outline: none; /* Remove o foco azul padrão do browser */
+
+    /* Estilo Rebaixado (Requisito 2 - O truque!) */
+    background-color: #ffffff;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1), /* Sombra interna de profundidade */
+                inset 0 1px 3px rgba(0, 0, 0, 0.06);
+
+    /* Transição suave para melhor experiência do usuário */
+    transition: all 0.2s ease-in-out;
+}
+
+/* --- ESTADO HOVER (Passe o mouse) --- */
+/* Opcional: Deixar um leve efeito de clique ao passar o mouse */
+.input-rebaixado:hover {
+    cursor: text;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.15), /* Escurece levemente */
+                inset 0 1px 3px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+}
+
+/* --- ESTADO FOCUS (Quando o usuário clica/ativa) --- */
+/* Este é o estado mais importante para feedback ao usuário */
+.input-rebaixado:focus {
+    /* O Efeito de "Levantamento" / Foco Ativo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), /* Sombra externa para parecer que 'levitou' */
+                inset 0 2px 6px rgba(0, 0, 0, 0.1);  /* Manter um toque de profundidade interna */
+    border-color: #007bff; /* Cor extra para o foco (opcional) */
+}
+
+</style>
